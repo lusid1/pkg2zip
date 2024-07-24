@@ -256,7 +256,7 @@ static void find_psp_sfo(const aes128_key* key, const aes128_key* ps3_key, const
 
 static void find_pbp_sfo(const aes128_key* key, const aes128_key* ps3_key, const uint8_t* iv, sys_file pkg, uint64_t pkg_size, uint64_t enc_offset, uint64_t items_offset, uint32_t item_count, char* discid)
 {
-    memset(discid, 0x00, 0x10);
+    memset(discid, 0x00, 0x0A);
     for (uint32_t item_index = 0; item_index < item_count; item_index++)
     {
         uint8_t item[32];
